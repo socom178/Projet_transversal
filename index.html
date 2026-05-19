@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>UATM/GASA – UFR Sciences & Techniques</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+  
+</head>
+<body>
+
+<!-- ═══ NAV ═══ -->
+<nav>
+  <div class="nav-logo">UATM<span>/GASA</span></div>
+  <ul class="nav-links">
+    <li><a href="#accueil">Accueil</a></li>
+    <li><a href="#facultes">Facultés</a></li>
+    <li><a href="#admissions">Admissions</a></li>
+    <li><a href="#recherche">Recherche</a></li>
+    <li><a href="#hebergement">Hébergement</a></li>
+    <li><a href="#actualites">Actualités</a></li>
+  </ul>
+</nav>
+
+
+<!-- ═══ RECHERCHE ═══ -->
+
+<!-- ═══ HÉBERGEMENT ═══ -->
+
+<!-- ═══ ACTUALITÉS ═══ -->
+
+<!-- ═══ FOOTER ═══ -->
+<footer>
+  <div class="footer-brand">
+    <div class="nav-logo">UATM<span>/GASA</span></div>
+    <p>UFR des Sciences et Techniques<br/>Bâtiment administratif R+2, 18 bureaux connectés<br/>Cotonou, Bénin</p>
+  </div>
+  <div class="footer-col">
+    <h4>Navigation</h4>
+    <ul>
+      <li><a href="#accueil">Accueil</a></li>
+      <li><a href="#facultes">Facultés</a></li>
+      <li><a href="#admissions">Admissions</a></li>
+      <li><a href="#recherche">Recherche</a></li>
+      <li><a href="#hebergement">Hébergement</a></li>
+      <li><a href="#actualites">Actualités</a></li>
+    </ul>
+  </div>
+  <div class="footer-col">
+    <h4>Ressources</h4>
+    <ul>
+      <li><a href="#">Espace étudiant</a></li>
+      <li><a href="#">Bibliothèque</a></li>
+      <li><a href="#">Règlement intérieur</a></li>
+      <li><a href="#">Calendrier académique</a></li>
+    </ul>
+  </div>
+  <div class="footer-col">
+    <h4>Contact</h4>
+    <ul>
+      <li><a href="#">📧 info@uatm-gasa.bj</a></li>
+      <li><a href="#">📞 +229 XX XX XX XX</a></li>
+      <li><a href="#">📍 Cotonou, Bénin</a></li>
+    </ul>
+  </div>
+</footer>
+<div class="footer-bottom">© 2025 UATM/GASA – UFR Sciences &amp; Techniques. Tous droits réservés. | Projet Transversal SIL 2ème année</div>
+
+<script>
+  // Reveal on scroll
+  const reveals = document.querySelectorAll('.reveal');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((e, i) => {
+      if (e.isIntersecting) {
+        // slight stagger per card in a group
+        const siblings = [...e.target.parentElement.children].filter(c => c.classList.contains('reveal'));
+        const idx = siblings.indexOf(e.target);
+        setTimeout(() => e.target.classList.add('visible'), idx * 80);
+        observer.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.12 });
+  reveals.forEach(r => observer.observe(r));
+</script>
+</body>
+</html>
